@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --c-w : #FFFFFF;
+  --c-b : #232323;
+
+  --c-primary: #5F4C2D;
+  --c-primaryHover: #9a6c23;
+  --c-primaryLow: #5f4c2d4b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  color: var(--c-b);
+  overflow-x: hidden;
+  background-color: var(--c-w);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* ******************************************************************* */

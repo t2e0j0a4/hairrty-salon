@@ -1,0 +1,64 @@
+.steps {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.step__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--c-primary);
+    background-color: var(--c-w);
+    border: 1.6px solid var(--c-primary);
+}
+
+.step__icon.current__step {
+    animation: colorShift 1s ease infinite alternate;
+}
+
+@keyframes colorShift {
+    0% {
+        color: var(--c-primaryHover);
+        background-color: var(--c-w);
+        border-color: var(--c-primaryHover);
+    }
+    100% {
+        background-color: var(--c-primaryHover);
+        color: var(--c-w);
+        border-color: var(--c-w);
+    }
+}
+
+.step__icon.done__step {
+    color: var(--c-w);
+    background-color: var(--c-primary);
+}
+
+.step__diff {
+    flex: 1;
+    height: 2px;
+    position: relative;
+    background-color: #23232340;
+}
+
+.step__diff::after {
+    position: absolute;
+    content: "";
+    height: inherit;
+    left: 0;
+
+    width: 0;
+    background-color: transparent;
+    transition: all 1s ease;
+}
+
+.step__diff.next__step::after {
+    width: 100%;
+    background-color: var(--c-primary);
+}

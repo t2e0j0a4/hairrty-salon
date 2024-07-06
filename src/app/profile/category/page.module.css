@@ -1,0 +1,117 @@
+.category__main {
+    width: 900px;
+    max-width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.8rem;
+    background-color: #FFFF;
+    box-shadow: inset 0 0 16px 4px #23232310;
+    margin-top: 1rem;
+}
+
+.category__main h3 {
+    font-size: 1.2rem;
+    text-align: left;
+    color: var(--c-primary);
+    font-weight: 600;
+}
+
+.category__main p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--c-b);
+}
+
+.category__selection {
+    flex: 1;
+}
+
+.category__selection, .item__form {
+    width: 100%;
+    margin-top: 1.2rem;
+}
+
+.category__selection > h4, .item__form > h4 {
+    font-size: 1.08rem;
+    text-align: left;
+    color: var(--c-primary);
+    font-weight: 600;
+}
+
+.form__main {
+    width: 100%;
+    margin-top: 0.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.item__form > button {
+    width: 100%;
+    padding: 0.4rem 0.7rem;
+    margin-top: 1.2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 6px;
+    background-color: var(--c-primary);
+    border: 1.6px solid var(--c-primary);
+    color: var(--c-w);
+    transition: border 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    outline: none;
+    font-weight: 500;
+    text-align: center;
+}
+
+.item__form > button:disabled {
+    background-color: var(--c-primaryLow);
+    border-color: var(--c-primaryLow);
+    color: #333333B0;
+    cursor: not-allowed;
+}
+
+.next__btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.8rem 0.4rem;
+}
+
+.next__btn a {
+    padding: 0.5rem 0.7rem;
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: center;
+    color: #FFFF;
+    background-color: var(--c-primaryHover);
+    border-radius: 2px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+@media (pointer: fine) and (hover: hover) {
+
+    .item__form > button:not(:disabled):is(:hover, :focus-visible) {
+        border: 1.6px solid var(--c-primaryHover);
+        background-color: var(--c-primaryHover);
+        color: var(--c-w);
+    }
+    
+    .next__btn a:is(:hover, :focus-visible) {
+        background-color: var(--c-primary);
+    }
+}
+
+@media all and (max-width: 600px) {
+    .form__main {
+        flex-direction: column;
+    }
+}

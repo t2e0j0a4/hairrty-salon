@@ -1,0 +1,88 @@
+.main__form {
+    width: 700px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.8rem;
+    background-color: #FFFF;
+    box-shadow: inset 0 0 16px 4px #23232310;
+    margin-top: 1rem;
+}
+
+.main__form h3 {
+    font-size: 1.2rem;
+    text-align: left;
+    color: var(--c-primary);
+    font-weight: 600;
+}
+
+.main__form p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--c-b);
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.options button {
+    padding: 0.3rem 0.5rem;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    background-color: #23232330;
+    color: var(--c-primary);
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.options button:disabled {
+    background-color: #23232310;
+    color: var(--c-primaryLow);
+    cursor: not-allowed;
+}
+
+.main__form > button {
+    width: 100%;
+    padding: 0.4rem 0.7rem;
+    margin-top: 1.2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 6px;
+    background-color: var(--c-primary);
+    border: 1.6px solid var(--c-primary);
+    color: var(--c-w);
+    transition: border 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    outline: none;
+    font-weight: 500;
+    text-align: center;
+}
+
+.main__form > button:disabled {
+    background-color: var(--c-primaryLow);
+    border-color: var(--c-primaryLow);
+    color: #333333B0;
+    cursor: not-allowed;
+}
+
+@media (pointer: fine) and (hover: hover) {
+
+    .options button:not(:disabled):is(:hover, :focus-visible) {
+        background-color: var(--c-primaryHover);
+        color: var(--c-w);
+    }
+
+    .main__form > button:not(:disabled):is(:hover, :focus-visible) {
+        background-color: var(--c-primaryHover);
+        border: 1.6px solid var(--c-primaryHover);
+        color: var(--c-w);
+    }
+}

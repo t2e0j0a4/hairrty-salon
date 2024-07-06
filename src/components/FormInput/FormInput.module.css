@@ -1,0 +1,100 @@
+.main__input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.4rem;
+    margin: 0.4rem auto;
+}
+
+.main__input label {
+    text-align: left;
+    font-size: 1.06rem;
+    color: var(--c-b);
+    font-family: inherit;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.36rem;
+}
+
+.main__input label span {
+    font-weight: 600;
+    text-align: left;
+    font-size: 0.8rem;
+    color: var(--c-primary);
+}
+
+.main__input > input {
+    width: 100%;
+    padding: 0.4rem 0.7rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1.6px solid #23232370;
+    transition: border 0.3s ease;
+    outline: none;
+    font-weight: 400;
+    text-align: left;
+}
+
+.main__input > input:focus {
+    border-color: var(--c-primary);
+    color: var(--c-primary);
+}
+
+.password__box {
+    width: 100%;
+    padding: 0.4rem 0.7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 6px;
+    border: 1.6px solid #23232370;
+    transition: border 0.3s ease;
+}
+
+.password__box:focus-within {
+    border-color: var(--c-primary);
+    color: var(--c-primary);
+}
+
+.password__box > input {
+    flex: 1;
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: left;
+    height: 100%;
+    border: none;
+}
+
+.password__box > button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #232323B0;
+    outline: none;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+@media (pointer: fine) and (hover: hover) {
+    .password__box > button:hover {
+        color: var(--c-primary);
+    }
+
+    .password__box > button:focus-visible {
+        color: var(--c-primary);
+        border-color: var(--c-primary);
+    }
+}

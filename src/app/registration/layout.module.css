@@ -1,0 +1,26 @@
+.app__registration {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 1.2rem;
+    background-color: transparent;
+}
+
+.registration__center {
+    width: max(1024px, 60%);
+    max-width: 100%;
+    margin: 1.2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.registration__center > h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--c-b);
+}

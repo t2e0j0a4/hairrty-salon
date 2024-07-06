@@ -1,0 +1,53 @@
+.docs__upload {
+    width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem;
+    border: 1.4px solid #23232340;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+}
+
+.docs__upload  label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--c-primary);
+}
+
+.docs__upload label p:nth-child(1) {
+    text-align: center;
+    font-size: 1.04rem;
+    color: var(--c-primary);
+    font-weight: 500;
+}
+
+.docs__upload label p {
+    text-align: center;
+    font-size: 0.92rem;
+    color: #232323A0;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.docs__upload > input {
+    opacity: 0;
+    height: 0;
+    overflow-y: hidden;
+}
+
+.docs__upload:focus-within {
+    border: 1.4px solid var(--c-primary);
+}
+
+.docs__upload:focus-within label p {
+    color: var(--c-primary);
+}

@@ -1,0 +1,99 @@
+.dropdown {
+    width: 100%;
+    position: relative;
+    margin-top: 0.8rem;
+}
+
+.dropdown > button {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: transparent;
+    border: 2px solid #23232370;
+    outline: none;
+    border-radius: 6px;
+    font-family: inherit;
+    color: #232323A0;
+    transition: color 0.3s ease, border 0.3s ease;
+}
+
+.dropdown > button span:nth-child(1) {
+    text-align: left;
+    font-size: 0.92rem;
+}
+
+.dropdown > button span:nth-child(2) {
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 1rem;
+}
+
+.dropdown > button span:nth-child(2).drop__open {
+    transform: rotate(-180deg);
+}
+
+.dropdown__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+    left: 0;
+    top: 3rem;
+    z-index: 10;
+    background-color: #EEEEEE;
+    position: absolute;
+    padding: 0.6rem;
+    padding-bottom: 1.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.dropdown__menu.hide__menu {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dropdown__menu.show__menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown__menu button {
+    width: 100%;
+    padding: 0.4rem;
+    background-color: transparent;
+    border-radius: 4px;
+    text-align: left;
+    font-family: inherit;
+    font-size: 0.88rem;
+    outline: none;
+    border: 1px solid #232323B0;
+    transition: color 0.3s ease, border 0.3s ease, background-color 0.3s ease;
+    color: #232323B0;
+}
+
+.dropdown__menu button.selected__option {
+    border: 1px solid var(--c-primaryHover);
+    color: var(--c-w);
+    background-color: var(--c-primaryHover);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .dropdown > button:is(:focus-visible, :hover) {
+        color: var(--c-primaryHover);
+        border-color: var(--c-primaryHover);
+    }
+
+    .dropdown__menu button:is(:hover, :focus-visible) {
+        border: 1px solid var(--c-primaryLow);
+        color: var(--c-primaryHover);
+        background-color: var(--c-primaryLow);
+    }
+}
