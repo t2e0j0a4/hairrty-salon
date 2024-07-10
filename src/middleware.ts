@@ -2,17 +2,23 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from "next/server";
 
 export default function middleware(request: NextRequest) {
-    if (request.nextUrl.pathname.startsWith('/profile')) {
-        const authToken = request.cookies.get('_salon__auth__token_')?.value;
+    const urlPath = request.nextUrl.pathname;
+    const authToken = request.cookies.get('_salon__auth__token_')?.value;
+    if (urlPath.startsWith('/profile')) {
 
         if (authToken === undefined || !authToken) {
             return NextResponse.redirect(new URL('/login', request.url))
         }
 
-        return NextResponse.next();
     }
+    if (urlPath.startsWith('/login')) {
+        if (authToken) {
+            return NextResponse.redirect(new URL('/profile', request.url))
+        }
+    }
+    return NextResponse.next();
 }
 
 export const config = {
-    matcher: '/profile/:path*'
+    matcher: ['/profile/:path*', '/login']
 }
