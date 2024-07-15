@@ -28,8 +28,8 @@ const HomePage = () => {
 
             <div className={styles.option}>
               <h3>Salon Login</h3>
-              <p>No need to login if you have already uploaded documents and selected items for categories.</p>
-              <p className={styles.last}>1. Update (or) Select categories & sub categories selected.</p>
+              <p>1. No need to register if you have already filled details about you & salon.</p>
+              <p className={styles.last}>2. Upload documents & Select categories & sub categories selected.</p>
               <Link href="/login" >Login</Link>
             </div>
 
