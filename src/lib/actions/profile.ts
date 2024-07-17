@@ -15,7 +15,11 @@ export async function uploadOwnerDocs(formData: FormData) {
             body: formData
         });
 
+        const data = await response.json();
+        console.log(data);
+        
         if (!response.ok) {
+            
 
             if (response.status === 400) {
                 return {
@@ -58,10 +62,9 @@ export async function uploadSalonDocs(formData: FormData) {
         });
 
         const data = await response.json();
-        console.log(data);
         
         if (!response.ok) {
-
+            console.log(data);
 
             if (response.status === 400) {
                 return {

@@ -14,17 +14,19 @@ import createToast from '@/utils/createToast';
 import { uploadOwnerDocs } from '@/lib/actions/profile';
 
 
-const needOwnerDocs: {id: number, name: string, fieldName: string, checked: boolean}[] = [
+const needOwnerDocs: {id: number, name: string, fieldName: string, checked: boolean, uploadName: string}[] = [
   {
     id: 1,
     name: 'Aadhar Card',
     fieldName: 'aadharCard',
+    uploadName: 'docs',
     checked: false
   },
   {
     id: 2,
     name: 'Pan Card',
     fieldName: 'panCard',
+    uploadName: 'docs',
     checked: false
   },
 ];
@@ -74,7 +76,7 @@ const UploadDocs = () => {
                 needOwnerDocs.map((doc) => {
                   return (
                     <div className={styles.doc__upload} key={doc.id}>
-                      <DocsInput uploadDocLabelId={`${doc.fieldName}Doc`} uploadDocName='docs' uploadDocTitle={doc.name} uploadDocRequired={true} />
+                      <DocsInput uploadDocLabelId={`${doc.fieldName}Doc`} uploadDocName={doc.uploadName} uploadDocTitle={doc.name} uploadDocRequired={true} />
                     </div>
                   )
                 })
