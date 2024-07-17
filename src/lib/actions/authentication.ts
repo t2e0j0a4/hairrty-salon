@@ -17,8 +17,7 @@ export async function detailsRegistration(formData: FormData) {
     }
 
     const address = {
-        areaAddress: formData.get('areaAddress'),
-        pincode: formData.get('pincode'),
+        location: formData.get('location'),
     }
 
     const newRegistration = {

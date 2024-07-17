@@ -54,8 +54,7 @@ const SalonRegistration = () => {
 
         {/* Address */}
 
-        <FormInput labelId='streetAddress' label='Street Address' fieldType='text' placeholder='Enter Salon Address' fieldTitle='Provide a valid salon address.' fieldName='areaAddress' required={true} />
-        <FormInput labelId='pincode' label='Pincode' fieldType='text' placeholder='Enter Salon Pincode' fieldTitle='Provide a valid salon pincode. (Digits only allowed)' fieldName='pincode' required={true} pattern="^\d+$" />
+        <FormInput labelId='streetAddress' label='Enter Address' fieldType='text' placeholder='Enter Salon Address' fieldTitle='Provide a valid salon address.' fieldName='location' required={true} />
 
         {/* Submit Button */}
 
